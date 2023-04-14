@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/14 13:29:45 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/14 14:26:32 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,20 @@ int	check_dup(int argc, char **argv)
 				return (printf("Error"), 0);
 			j++;
 		}
+		i++;
+	}
+	return (1);
+}
+
+int	check_type(int argc, char **argv)
+{
+	int	i;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (strchr(argv[i], '.') != 0)
+			return (printf("Error"), 0);
 		i++;
 	}
 	return (1);
