@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/14 13:25:35 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/14 13:29:45 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ int	check_dup(int argc, char **argv)
 	int		j;
 
 	i = 1;
-	while (i != argc)
+	while (i < argc)
 	{
 		j = i + 1;
-		while (j != argc)
+		while (j < argc)
 		{
 			if (strcmp(argv[i], argv[j]) == 0)
 				return (printf("Error"), 0);
@@ -52,5 +52,14 @@ int	check_dup(int argc, char **argv)
 		}
 		i++;
 	}
+	return (1);
+}
+
+int	check_input(int argc, char **argv)
+{
+	if (check_int(argc, argv) == 0)
+		return (0);
+	if (check_dup(argc, argv) == 0)
+		return (0);
 	return (1);
 }
