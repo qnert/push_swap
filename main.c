@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:55:45 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/14 14:03:52 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/19 10:52:29 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int argc, char **argv)
 	int	check;
 
 	i = 1;
-	check = check_type(argc, argv);
+	check = check_input(argc, argv);
 	if (check == 0)
 		return (0);
 	printf("%s\n", argv[i]);

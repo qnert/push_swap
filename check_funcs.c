@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/14 14:26:32 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/19 10:54:22 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	check_int(int argc, char **argv)
 			if (j == 0 && (argv[i][j] == '-' || argv[i][j] == '+'))
 			{
 			}
-			if (j != 0 && isdigit(argv[i][j]) == 0)
+			else if (isdigit(argv[i][j]) == 0)
 				return (printf("Error"), 0);
 			j++;
 		}
