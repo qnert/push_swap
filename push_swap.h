@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/20 16:14:55 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/20 16:47:16 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <string.h>
 # include <limits.h>
 # include "ft_printf/ft_printf.h"
-# include "libft/libft/libft.h"
+# include "libft/libft.h"
 
 typedef struct Stack
 {
