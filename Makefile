@@ -2,17 +2,17 @@ CC = CC
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
 
-SRC =
+SRCS = check_funcs.c main.c stack_funcs.c
 
-OJBS =
+all:
+	@cd libft && cd libft && make
+	@cd ft_printf && make
+	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME) libft/libft/libft.a ft_printf/libftprintf.a
 
-all: libft printf
+clean:
+	@cd libft && cd libft && make fclean
+	@cd ft_printf && make fclean
 
-libft:
-	git clone https://github.com/qnert/libft.git
-	make -C ~/Desktop/42_Heilbronn/push_swap/libft/libft
-
-printf:
-	git clone https://github.com/qnert/ft_printf.git
-	make -C ~/Desktop/42_Heilbronn/push_swap/ft_printf
+fclean: clean
+	@rm push_swap
 
