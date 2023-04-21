@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:23:16 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/20 16:19:20 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/21 15:39:10 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ t_stack	*stack_create(int capacity)
 	new_stack = malloc(sizeof(t_stack));
 	if (new_stack == NULL)
 		return (NULL);
-	new_stack->stack = malloc(sizeof(int) * capacity);
-	if (new_stack->stack == NULL)
+	new_stack->collection = malloc(sizeof(int) * capacity);
+	if (new_stack->collection == NULL)
 		return (free(new_stack), NULL);
 	new_stack->capacity = capacity;
 	new_stack->top = 0;
@@ -31,7 +31,7 @@ t_stack	*stack_create(int capacity)
 
 void	stack_destroy(t_stack *stack)
 {
-	free(stack->stack);
+	free(stack->collection);
 	free(stack);
 }
 
@@ -39,7 +39,7 @@ int	push(t_stack *stack, int value)
 {
 	if (stack->top == stack->capacity)
 		return (0);
-	stack->stack[stack->top] = value;
+	stack->collection[stack->top] = value;
 	stack->top++;
 	return (1);
 }
@@ -49,7 +49,7 @@ int	pull(t_stack *stack, int *value)
 	if (stack->top == 0)
 		return (0);
 	stack->top--;
-	*value = stack->stack[stack->top];
+	*value = stack->collection[stack->top];
 	return (1);
 }
 
@@ -67,4 +67,3 @@ t_stack	*stack_init(int argc, char **argv)
 	}
 	return (stack);
 }
-

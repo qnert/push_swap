@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/20 16:47:16 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/21 15:13:42 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@
 
 typedef struct Stack
 {
-	int	*stack;
+	int	*collection;
 	int	capacity;
 	int	top;
-}		t_stack ;
+}t_stack ;
+
 int		check_int(int argc, char **argv);
 int		check_dup(int argc, char **argv);
 int		check_input(int argc, char **argv);
@@ -36,5 +37,8 @@ void	stack_destroy(t_stack *stack);
 int		push(t_stack *stack, int value);
 int		pull(t_stack *stack, int *value);
 t_stack	*stack_init(int argc, char **argv);
+void	ft_swap(t_stack *stack);
+void	ft_ss(t_stack *stack_a, t_stack *stack_b);
+void	ft_push(t_stack *stack_a, t_stack *stack_b);
 
 #endif
