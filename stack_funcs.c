@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:23:16 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/21 16:05:39 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/21 16:55:35 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,12 @@ t_stack	*stack_init(int argc, char **argv)
 	int		i;
 	t_stack	*stack;
 
-	i = 1;
+	i = argc - 1;
 	stack = stack_create(argc - 1);
 	while (stack->top != stack->capacity)
 	{
 		push(stack, ft_atoi(argv[i]));
-		i++;
+		i--;
 	}
 	return (stack);
 }
