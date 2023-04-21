@@ -2,7 +2,7 @@ CC = CC
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
 
-SRCS = check_funcs.c main.c stack_funcs.c swap_push_funcs.c
+SRCS = check_funcs.c main.c stack_funcs.c swap_push_funcs.c rotate_funcs.c
 
 all:
 	@cd libft && make

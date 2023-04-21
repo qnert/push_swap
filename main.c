@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:55:45 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/21 17:09:27 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/22 00:05:18 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,21 @@ int	main(int argc, char **argv)
 	stack_b = stack_create(argc);
 	ft_push(stack_a, stack_b);
 	ft_push(stack_a, stack_b);
-	ft_printf("%d\n", stack_a->collection[stack_a->top - 1]);
+	ft_push(stack_a, stack_b);
+	ft_rr(stack_a, stack_b);
+	check = stack_a->top - 1;
+	while (check >= 0)
+	{
+		ft_printf("%d\n", stack_a->collection[check]);
+		check--;
+	}
+	check = stack_b->top - 1;
+	ft_printf("\n");
+	while (check >= 0)
+	{
+		ft_printf("%d\n", stack_b->collection[check]);
+		check--;
+	}
 	stack_destroy(stack_a);
 	stack_destroy(stack_b);
 }

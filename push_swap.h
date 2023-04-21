@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/21 15:13:42 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/21 23:56:59 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ t_stack	*stack_init(int argc, char **argv);
 void	ft_swap(t_stack *stack);
 void	ft_ss(t_stack *stack_a, t_stack *stack_b);
 void	ft_push(t_stack *stack_a, t_stack *stack_b);
+void	ft_rotate(t_stack *stack);
+void	ft_rr(t_stack *stack_a, t_stack *stack_b);
 
 #endif
