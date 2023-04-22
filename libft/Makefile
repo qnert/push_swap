@@ -16,24 +16,24 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 HEADER = libft
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAG) -c $(SRCS)
-	ar -rcs $(NAME) $(OBJS)
+	@$(CC) $(CFLAG) -c $(SRCS)
+	@ar -rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	@rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 bonus: $(BONUS_OBJS)
 
 $(BONUS_OBJS):
-	$(CC) $(CFLAG) -c $(BONUS_SRCS)
-	ar -rcs $(NAME) $(BONUS_OBJS)
+	@$(CC) $(CFLAG) -c $(BONUS_SRCS)
+	@ar -rcs $(NAME) $(BONUS_OBJS)
 
 re: fclean all

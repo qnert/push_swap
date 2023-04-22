@@ -6,11 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 14:14:00 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/21 23:56:46 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/22 16:47:48 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "/Users/qnert/Desktop/C:C++/42_Heilbronn/push_swap/push_swap.h"
 
 void	ft_swap(t_stack *stack)
 {
