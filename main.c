@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:55:45 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/22 00:05:18 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/22 12:25:56 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int	main(int argc, char **argv)
 	ft_push(stack_a, stack_b);
 	ft_push(stack_a, stack_b);
 	ft_push(stack_a, stack_b);
-	ft_rr(stack_a, stack_b);
+	ft_rrr(stack_a, stack_b);
+	ft_r_rotate(stack_b);
 	check = stack_a->top - 1;
 	while (check >= 0)
 	{
