@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:55:45 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/22 17:06:43 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/23 14:15:31 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 		return (0);
 	stack_a = stack_init(argc, argv);
 	stack_b = stack_create(argc);
-	ft_r_rotate(stack_a);
+	ft_printf("%d\n", is_sorted(stack_a));
 	check = stack_a->top - 1;
 	while (check >= 0)
 	{

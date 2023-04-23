@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 23:36:26 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/22 16:47:28 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/23 14:20:26 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_rotate(t_stack *stack)
 		return ;
 	tmp = stack->collection[stack->top - 1];
 	i = 1;
-	while(i < stack->top)
+	while (i < stack->top)
 	{
 		stack->collection[stack->top - i] = stack->collection[stack->top - i - 1];
 		i++;

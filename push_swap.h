@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/22 12:22:31 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/23 14:19:58 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct Stack
 	int	*collection;
 	int	capacity;
 	int	top;
-}t_stack ;
+}	t_stack;
 
 //check input funcs
 int		check_int(int argc, char **argv);
@@ -48,5 +48,7 @@ void	ft_rotate(t_stack *stack);
 void	ft_rr(t_stack *stack_a, t_stack *stack_b);
 void	ft_r_rotate(t_stack *stack);
 void	ft_rrr(t_stack *stack_a, t_stack *stack_b);
+//sorting funcs
+int		is_sorted(t_stack *stack);
 
 #endif
