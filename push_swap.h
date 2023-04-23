@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/23 14:19:58 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/23 18:37:27 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ void	ft_rr(t_stack *stack_a, t_stack *stack_b);
 void	ft_r_rotate(t_stack *stack);
 void	ft_rrr(t_stack *stack_a, t_stack *stack_b);
 //sorting funcs
-int		is_sorted(t_stack *stack);
+int		is_sorted_a(t_stack *stack);
+int		*int_arr_cpy(t_stack *stack);
+void	convert_collection(t_stack *stack);
 
 #endif
