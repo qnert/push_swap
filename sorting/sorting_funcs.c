@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 14:10:48 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/23 18:50:35 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/23 22:57:46 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,16 +45,39 @@ int	*int_arr_cpy(t_stack *stack)
 	return (copy);
 }
 
+void	sort_int_arr(int *collection, int len)
+{
+	int	tmp;
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < len)
+	{
+		j = i + 1;
+		while (j < len)
+		{
+			if (collection[i] > collection[j])
+			{
+				tmp = collection[i];
+				collection[i] = collection[j];
+				collection[j] = tmp;
+			}
+			j++;
+		}
+		i++;
+	}
+}
+
 void	convert_collection(t_stack *stack)
 {
 	int	i;
 	int	j;
-	int	tmp;
 	int	*copy;
 
 	i = 0;
-	tmp = stack->collection[i];
 	copy = int_arr_cpy(stack);
+	sort_int_arr(copy, stack->top);
 	if (copy == NULL)
 		return ;
 	while (i < stack->top)
@@ -62,21 +85,10 @@ void	convert_collection(t_stack *stack)
 		j = 0;
 		while (j < stack->top)
 		{
-			if (tmp > copy[j])
-				tmp = copy[j];
+			if (stack->collection[i] == copy[j])
+				stack->collection[i] = j;
 			j++;
 		}
-		j = 0;
-		while (j < stack->top)
-		{
-			if (copy[j] == tmp)
-			{
-				stack->collection[j] = i;
-				break ;
-			}
-			j++;
-		}
-		tmp++;
 		i++;
 	}
 	free(copy);
