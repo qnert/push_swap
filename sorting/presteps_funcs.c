@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting_funcs.c                                    :+:      :+:    :+:   */
+/*   presteps_funcs.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 14:10:48 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/23 22:57:46 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/24 13:47:43 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,10 @@ void	convert_collection(t_stack *stack)
 		while (j < stack->top)
 		{
 			if (stack->collection[i] == copy[j])
+			{
 				stack->collection[i] = j;
+				break ;
+			}
 			j++;
 		}
 		i++;
