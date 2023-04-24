@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/23 22:42:07 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/24 12:21:09 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,29 @@ int		push(t_stack *stack, int value);
 int		pull(t_stack *stack, int *value);
 t_stack	*stack_init(int argc, char **argv);
 //instruction funcs
+//swap
 void	ft_swap(t_stack *stack);
+void	ft_swap_a(t_stack *stack);
+void	ft_swap_b(t_stack *stack);
 void	ft_ss(t_stack *stack_a, t_stack *stack_b);
-void	ft_push(t_stack *stack_a, t_stack *stack_b);
+//push
+void	ft_push_b(t_stack *stack_a, t_stack *stack_b);
+void	ft_push_a(t_stack *stack_a, t_stack *stack_b);
+//rotate_funcs
 void	ft_rotate(t_stack *stack);
+void	ft_rotate_a(t_stack *stack);
+void	ft_rotate_b(t_stack *stack);
 void	ft_rr(t_stack *stack_a, t_stack *stack_b);
+//reverse rotate funcs
 void	ft_r_rotate(t_stack *stack);
+void	ft_r_rotate_a(t_stack *stack);
+void	ft_r_rotate_b(t_stack *stack);
 void	ft_rrr(t_stack *stack_a, t_stack *stack_b);
 //sorting funcs
 int		is_sorted_a(t_stack *stack);
 int		*int_arr_cpy(t_stack *stack);
 void	convert_collection(t_stack *stack);
+//small_sort_funcs
+void	small_sort(t_stack *stack_a);
 
 #endif

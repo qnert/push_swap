@@ -2,8 +2,9 @@ CC = CC
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
 
-SRCS = check_funcs.c main.c stack_funcs.c ./instructions/swap_push_funcs.c \
-		./instructions/rotate_funcs.c ./sorting/sorting_funcs.c
+SRCS = check_funcs.c main.c stack_funcs.c ./instructions/swap_funcs.c ./instructions/push_funcs.c\
+		./instructions/rotate_funcs.c ./instructions/reverse_rotate_funcs.c ./sorting/presteps_funcs.c \
+		./sorting/small_sort.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -13,7 +14,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 	@cd libft && make
 	@cd ft_printf && make
-	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME) libft/libft.a ft_printf/libftprintf.a
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) libft/libft.a ft_printf/libftprintf.a
 
 $(NAME) : $(OBJS)
 	@$(CC) $(CFLAGS) -c $(SRCS)

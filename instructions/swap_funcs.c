@@ -1,73 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_funcs.c                                     :+:      :+:    :+:   */
+/*   swap_funcs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/21 23:36:26 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/24 11:20:09 by skunert          ###   ########.fr       */
+/*   Created: 2023/04/21 14:14:00 by skunert           #+#    #+#             */
+/*   Updated: 2023/04/24 12:19:08 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_rotate(t_stack *stack)
+void	ft_swap(t_stack *stack)
 {
 	int	tmp;
-	int	i;
 
 	if (stack->top == 0 || stack->top == 1)
 		return ;
 	tmp = stack->collection[stack->top - 1];
-	i = 1;
-	while (i < stack->top)
-	{
-		stack->collection[stack->top - i] = stack->collection[stack->top - i - 1];
-		i++;
-	}
-	stack->collection[0] = tmp;
+	stack->collection[stack->top - 1] = stack->collection[stack->top - 2];
+	stack->collection[stack->top - 2] = tmp;
 }
 
-void	ft_rotate_a(t_stack *stack)
+void	ft_swap_a(t_stack *stack)
 {
 	int	tmp;
-	int	i;
 
 	if (stack->top == 0 || stack->top == 1)
 		return ;
 	tmp = stack->collection[stack->top - 1];
-	i = 1;
-	while (i < stack->top)
-	{
-		stack->collection[stack->top - i] = stack->collection[stack->top - i - 1];
-		i++;
-	}
-	stack->collection[0] = tmp;
-	ft_printf("ra\n");
+	stack->collection[stack->top - 1] = stack->collection[stack->top - 2];
+	stack->collection[stack->top - 2] = tmp;
+	ft_printf("sa\n");
 }
 
-void	ft_rotate_b(t_stack *stack)
+void	ft_swap_b(t_stack *stack)
 {
 	int	tmp;
-	int	i;
 
 	if (stack->top == 0 || stack->top == 1)
 		return ;
 	tmp = stack->collection[stack->top - 1];
-	i = 1;
-	while (i < stack->top)
-	{
-		stack->collection[stack->top - i] = stack->collection[stack->top - i - 1];
-		i++;
-	}
-	stack->collection[0] = tmp;
-	ft_printf("rb\n");
+	stack->collection[stack->top - 1] = stack->collection[stack->top - 2];
+	stack->collection[stack->top - 2] = tmp;
+	ft_printf("sb\n");
 }
 
-void	ft_rr(t_stack *stack_a, t_stack *stack_b)
+void	ft_ss(t_stack *stack_a, t_stack *stack_b)
 {
-	ft_rotate(stack_a);
-	ft_rotate(stack_b);
-	ft_printf("rr\n");
+	ft_swap(stack_a);
+	ft_swap(stack_b);
+	ft_printf("ss\n");
 }

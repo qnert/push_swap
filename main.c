@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:55:45 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/23 22:56:37 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/24 11:52:43 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ int	main(int argc, char **argv)
 		return (0);
 	stack_a = stack_init(argc, argv);
 	stack_b = stack_create(argc);
-	convert_collection(stack_a);
+	if (argc - 1 <= 6)
+		small_sort(stack_a);
+	else
+	{}
 	check = stack_a->top - 1;
 	while (check >= 0)
 	{
