@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:55:45 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/24 14:56:39 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/24 15:46:54 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	main(int argc, char **argv)
 		small_sort_three(stack_a);
 	else if (argc -1 <= 5)
 		small_sort_five(stack_a, stack_b);
+	else if (argc - 1 > 5)
+		big_sort(stack_a, stack_b);
 	check = stack_a->top - 1;
 	while (check >= 0)
 	{

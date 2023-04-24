@@ -4,7 +4,7 @@ NAME = push_swap
 
 SRCS = check_funcs.c main.c stack_funcs.c ./instructions/swap_funcs.c ./instructions/push_funcs.c\
 		./instructions/rotate_funcs.c ./instructions/reverse_rotate_funcs.c ./sorting/presteps_funcs.c \
-		./sorting/small_sort.c
+		./sorting/small_sort.c ./sorting/big_sort.c
 
 OBJS = $(SRCS:.c=.o)
 

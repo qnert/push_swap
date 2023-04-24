@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/24 14:56:57 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/24 15:46:22 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ void	convert_collection(t_stack *stack);
 //small_sort_funcs
 void	small_sort_three(t_stack *stack_a);
 void	small_sort_five(t_stack *stack_a, t_stack *stack_b);
+void	big_sort(t_stack *stack_a, t_stack *stack_b);
 
 #endif
