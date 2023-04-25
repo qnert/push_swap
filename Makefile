@@ -9,16 +9,16 @@ SRCS = ./instructions/check_funcs.c push_swap.c ./instructions/stack_funcs.c ./i
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
-	@cd libft && make
-	@cd ft_printf && make
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) libft/libft.a ft_printf/libftprintf.a
+	@cd ./includes/libft && make
+	@cd ./includes/ft_printf && make
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) ./includes/libft/libft.a ./includes/ft_printf/libftprintf.a
 
 $(NAME) : $(OBJS)
 	@$(CC) $(CFLAGS) -c $(SRCS)
 
 clean:
-	@cd libft && make fclean
-	@cd ft_printf && make fclean
+	@cd ./includes/libft && make fclean
+	@cd ./includes/ft_printf && make fclean
 	@cd instructions && rm -f *.o
 	@cd sorting && rm -f *.o
 	@rm -f *.o
@@ -27,4 +27,6 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+bonus:
 

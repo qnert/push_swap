@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 11:24:50 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/25 15:06:21 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/25 16:12:20 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	small_sort_three(t_stack *stack_a)
 	}
 }
 
-void right_rotate(t_stack *stack, int value)
+void	right_rotate(t_stack *stack, int value)
 {
 	int	i;
 
