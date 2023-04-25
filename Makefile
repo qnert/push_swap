@@ -1,5 +1,5 @@
 CC = CC
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 NAME = push_swap
 
 SRCS = check_funcs.c main.c stack_funcs.c ./instructions/swap_funcs.c ./instructions/push_funcs.c\
