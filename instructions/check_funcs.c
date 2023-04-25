@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/25 16:28:11 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/25 17:27:13 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	check_int(int argc, char **argv)
 			{
 			}
 			else if (ft_isdigit(argv[i][j]) == 0)
-				return (ft_printf("Error"), 0);
+				return (ft_printf("Error\n"), 0);
 			j++;
 		}
 		i++;
@@ -47,9 +47,29 @@ int	check_dup(int argc, char **argv)
 		while (j < argc)
 		{
 			if (strncmp(argv[i], argv[j], argc - 2) == 0)
-				return (ft_printf("Error"), 0);
+				return (ft_printf("Error\n"), 0);
 			j++;
 		}
+		i++;
+	}
+	return (1);
+}
+
+int	check_type(int argc, char **argv)
+{
+	int		i;
+	long	max_int;
+	long	min_int;
+
+	i = 1;
+	max_int = 2147483647;
+	min_int = -2147483648;
+	while (i < argc)
+	{
+		if (ft_strlen(argv[i]) > 11)
+			return (ft_printf("Error\n"), 0);
+		if (ft_atoi(argv[i]) > max_int || ft_atoi(argv[i]) < min_int)
+			return (ft_printf("Error\n"), 0);
 		i++;
 	}
 	return (1);
@@ -60,6 +80,8 @@ int	check_input(int argc, char **argv)
 	if (check_int(argc, argv) == 0)
 		return (0);
 	if (check_dup(argc, argv) == 0)
+		return (0);
+	if (check_type(argc, argv) == 0)
 		return (0);
 	return (1);
 }

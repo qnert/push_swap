@@ -1,6 +1,7 @@
 CC = CC
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
+CHECKER = checker
 
 SRCS = ./instructions/check_funcs.c push_swap.c ./instructions/stack_funcs.c ./instructions/swap_funcs.c ./instructions/push_funcs.c\
 		./instructions/rotate_funcs.c ./instructions/reverse_rotate_funcs.c ./sorting/presteps_funcs.c \
@@ -8,13 +9,18 @@ SRCS = ./instructions/check_funcs.c push_swap.c ./instructions/stack_funcs.c ./i
 
 OBJS = $(SRCS:.c=.o)
 
+GNLSRCS = ./includes/get_next_line/get_next_line.c ./includes/get_next_line/get_next_line_utils.c
+
+GNLOBJS = $(GNNLSRCS:.c=.o)
+
 all: $(NAME)
 	@cd ./includes/libft && make
 	@cd ./includes/ft_printf && make
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) ./includes/libft/libft.a ./includes/ft_printf/libftprintf.a
 
-$(NAME) : $(OBJS)
+$(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) -c $(SRCS)
+	@$(CC) $(CFLAGS) -c $(GNLSRCS)
 
 clean:
 	@cd ./includes/libft && make fclean
@@ -28,5 +34,5 @@ fclean: clean
 
 re: fclean all
 
-bonus:
-
+bonus: $(NAME)
+	@$(CC) $(CFLAGS) -o $(CHECKER) $(OBJS) ./includes/libft/libft.a ./includes/ft_printf/libftprintf.a
