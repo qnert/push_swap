@@ -6,11 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/20 16:20:50 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/25 15:55:42 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	check_int(int argc, char **argv)
 {

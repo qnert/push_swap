@@ -6,11 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:23:16 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/21 16:55:35 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/25 15:55:45 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_stack	*stack_create(int capacity)
 {
