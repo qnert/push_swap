@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:11:59 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 18:33:47 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 18:47:15 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ int	check_argv_int(char **argv)
 	while (input[i] != NULL)
 	{
 		j = 0;
-		while (*input[j] != '\0')
+		while (input[i][j] != '\0')
 		{
-			if (j == 0 && (*input[j] == '-' || *input[j] == '+'))
+			if (j == 0 && (input[i][j] == '-' || input[i][j] == '+'))
 			{
-				if (*input[j + 1] == '\0')
+				if (input[i][j + 1] == '\0')
 					return (ft_printf("Error\n"), 0);
 			}
-			else if (ft_isdigit(*input[j]) == 0)
+			else if (ft_isdigit(input[i][j]) == 0)
 				return (ft_printf("Error\n"), 0);
 			j++;
 		}
@@ -67,12 +67,12 @@ int	check_argv_dup(char **argv)
 
 	input = ft_split(argv[1], ' ');
 	i = 0;
-	while (argv[i] != NULL)
+	while (input[i] != NULL)
 	{
 		j = i + 1;
-		while (j < ft_strlen(input[i]))
+		while (input[j] != NULL)
 		{
-			if (ft_strncmp(input[i], input[j], ft_strlen(input[i])) == 0)
+			if (ft_strncmp(input[i], input[j], ft_strlen(input[j])) == 0)
 				return (ft_printf("Error\n"), 0);
 			j++;
 		}
