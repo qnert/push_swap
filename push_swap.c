@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:55:45 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 13:24:39 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 15:52:49 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	t_stack	*stack_b;
 
 	check = check_input(argc, argv);
-	if (check == 0 || argc - 1 == 0 || argc - 1 == 1)
+	if (check == 0 || argc - 1 == 0)
 		return (0);
 	stack_a = stack_init(argc, argv);
 	stack_b = stack_create(argc);

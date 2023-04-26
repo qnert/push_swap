@@ -1,7 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
-BONUS = checker
 
 SRCS = ./instructions/check_funcs.c ./instructions/stack_funcs.c ./instructions/swap_funcs.c ./instructions/push_funcs.c\
 		./instructions/rotate_funcs.c ./instructions/reverse_rotate_funcs.c ./sorting/presteps_funcs.c \
@@ -12,10 +11,6 @@ OBJS = $(SRCS:.c=.o)
 NAME_SRC = push_swap.c
 
 NAME_OBJ = $(NAME_SRC:.c=.o)
-
-BONUS_SRC = checker.c
-
-BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all: $(NAME)
 
