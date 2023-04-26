@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:09:55 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 13:34:40 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 13:54:02 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	**get_stdin()
 	char	*buff;
 	char	*input;
 
-	buff = ft_calloc(1, 1);
+	buff = ft_strdup("");
 	input = get_next_line(0);
 	while (buff != NULL)
 	{

@@ -6,19 +6,13 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 12:06:14 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 13:50:33 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <stddef.h>
-# include <ctype.h>
-# include <string.h>
-# include <limits.h>
 # include "./includes/includes.h"
 
 //mystack struct
