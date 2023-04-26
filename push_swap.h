@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/25 16:26:56 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 12:06:14 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@
 # include <ctype.h>
 # include <string.h>
 # include <limits.h>
-# include "./includes/ft_printf/ft_printf.h"
-# include "./includes/libft/libft.h"
-# include "./includes/get_next_line/get_next_line.h"
+# include "./includes/includes.h"
 
 //mystack struct
 typedef struct Stack
