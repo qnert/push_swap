@@ -18,7 +18,7 @@ $(NAME): $(OBJS)
 clean:
 	@cd instructions && rm -f *.o
 	@cd sorting && rm -f *.o
-	@cd includes && fclean
+	@cd includes && make fclean
 
 fclean: clean
 	@rm -f $(NAME)
