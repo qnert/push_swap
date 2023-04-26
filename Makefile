@@ -27,7 +27,7 @@ clean:
 	@cd instructions && rm -f *.o
 	@cd sorting && rm -f *.o
 	@cd includes && make fclean
-	@rm $(NAME_OBJ) $(BONUS_OBJ)
+	@rm -f *.o
 
 fclean: clean
 	@rm -f $(NAME)

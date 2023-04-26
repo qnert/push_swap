@@ -6,12 +6,11 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:09:55 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 11:14:04 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 13:34:40 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "./includes/get_next_line/get_next_line.h"
 
 char	**get_stdin();
 
