@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 16:03:48 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 18:27:34 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	check_int(int argc, char **argv)
 		{
 			if (j == 0 && (argv[i][j] == '-' || argv[i][j] == '+'))
 			{
+				if (argv[i][j + 1] == '\0')
+					return (ft_printf("Error\n"), 0);
 			}
 			else if (ft_isdigit(argv[i][j]) == 0)
 				return (ft_printf("Error\n"), 0);
@@ -46,7 +48,7 @@ int	check_dup(int argc, char **argv)
 		j = i + 1;
 		while (j < argc)
 		{
-			if (strncmp(argv[i], argv[j], argc - 2) == 0)
+			if (ft_strncmp(argv[i], argv[j], argc - 1) == 0)
 				return (ft_printf("Error\n"), 0);
 			j++;
 		}
@@ -83,6 +85,5 @@ int	check_input(int argc, char **argv)
 		return (0);
 	if (check_type(argc, argv) == 0)
 		return (0);
-
 	return (1);
 }

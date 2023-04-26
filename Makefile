@@ -2,7 +2,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
 
-SRCS = ./instructions/check_funcs.c ./instructions/stack_funcs.c ./instructions/swap_funcs.c ./instructions/push_funcs.c\
+SRCS = ./instructions/check_funcs.c ./instructions/stack_argv_funcs.c ./instructions/stack_funcs.c ./instructions/swap_funcs.c ./instructions/push_funcs.c\
 		./instructions/rotate_funcs.c ./instructions/reverse_rotate_funcs.c ./sorting/presteps_funcs.c \
 		./sorting/small_sort.c ./sorting/big_sort.c
 

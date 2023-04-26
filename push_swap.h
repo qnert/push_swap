@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 13:50:33 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 17:34:34 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ typedef struct Stack
 int		check_int(int argc, char **argv);
 int		check_dup(int argc, char **argv);
 int		check_input(int argc, char **argv);
+//stack argc = 2 funcs and check
+t_stack *stack_make(char **argv);
+int		check_argv_int(char **argv);
+int		check_argv_dup(char **argv);
+int		check_argv_type(char **argv);
+int		check_argv_input(char **argv);
 //stack funcs
 t_stack	*stack_create(int capacity);
 void	stack_destroy(t_stack *stack);
