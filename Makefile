@@ -9,16 +9,25 @@ SRCS = ./instructions/check_funcs.c ./instructions/stack_funcs.c ./instructions/
 
 OBJS = $(SRCS:.c=.o)
 
+NAME_SRC = push_swap.c
+
+NAME_OBJ = $(NAME_SRC:.c=.o)
+
+BONUS_SRC = checker.c
+
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
+
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(NAME_OBJ)
 	@cd includes && make
-	$(CC) $(CFLAGS) -o $(NAME) push_swap.c $(OBJS) ./includes/includes.a
+	$(CC) $(CFLAGS) -o $(NAME) $(NAME_OBJ) $(OBJS) ./includes/includes.a
 
 clean:
 	@cd instructions && rm -f *.o
 	@cd sorting && rm -f *.o
 	@cd includes && make fclean
+	@rm $(NAME_OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	@rm -f $(NAME)
@@ -26,7 +35,10 @@ fclean: clean
 re: fclean all
 
 bonus: $(BONUS)
-	$(CC) $(CFLAGS) -o $(BONUS) checker.c $(OBJS) ./includes/includes.a
+
+$(BONUS): $(OBJS) $(BONUS_OBJ)
+	@cd includes && make
+	$(CC) $(CFLAGS) -o $(BONUS) $(BONUS_OBJ) $(OBJS) ./includes/includes.a
 
 
 
