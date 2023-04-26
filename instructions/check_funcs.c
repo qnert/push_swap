@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/25 17:27:13 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 15:27:55 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,29 @@ int	check_type(int argc, char **argv)
 	{
 		if (ft_strlen(argv[i]) > 11)
 			return (ft_printf("Error\n"), 0);
-		if (ft_atoi(argv[i]) > max_int || ft_atoi(argv[i]) < min_int)
+		if (ft_atoi(argv[i]) > max_int || (ft_atoi(argv[i]) < min_int))
 			return (ft_printf("Error\n"), 0);
+		i++;
+	}
+	return (1);
+}
+
+int	check_whitespace(int argc, char **argv)
+{
+	int	i;
+	int	j;
+
+
+	i = 1;
+	j = 0;
+	while (i < argc)
+	{
+		while (*argv[j] != '\0')
+		{
+			if ((*argv[i] >= 9 && *argv[i] <= 13) || *argv[i] == 32)
+				return (ft_printf("Error\n"), 0);
+			j++;
+		}
 		i++;
 	}
 	return (1);
@@ -83,5 +104,8 @@ int	check_input(int argc, char **argv)
 		return (0);
 	if (check_type(argc, argv) == 0)
 		return (0);
+	if (check_whitespace(argc, argv) == 0)
+		return (0);
+
 	return (1);
 }

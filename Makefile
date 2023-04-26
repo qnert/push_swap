@@ -34,13 +34,3 @@ fclean: clean
 
 
 re: fclean all
-
-bonus: $(BONUS)
-
-$(BONUS): $(OBJS) $(BONUS_OBJ)
-	@cd includes && make
-	$(CC) $(CFLAGS) -o $(BONUS) $(BONUS_OBJ) $(OBJS) ./includes/includes.a
-
-
-
-
