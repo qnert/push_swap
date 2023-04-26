@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 15:55:59 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/26 16:03:48 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ int	check_input(int argc, char **argv)
 		return (0);
 	if (check_type(argc, argv) == 0)
 		return (0);
+
 	return (1);
 }
