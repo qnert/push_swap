@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 17:34:34 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/27 15:27:10 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "./includes/includes.h"
+# include <stddef.h>
 
 //mystack struct
 typedef struct Stack

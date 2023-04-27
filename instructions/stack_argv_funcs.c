@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:11:59 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 19:09:33 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/27 15:40:05 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_stack	*stack_make(char **argv)
 	int		i;
 	t_stack	*stack;
 
+	if (ft_strlen(argv[1]) == 0)
+		return (NULL);
 	input = ft_split(argv[1], ' ');
 	i = 0;
 	while (input[i] != NULL)
@@ -97,6 +99,8 @@ int	check_argv_type(char **argv)
 
 int	check_argv_input(char **argv)
 {
+	if (ft_strlen(argv[1]) == 0)
+		return (0);
 	if (check_argv_int(argv) == 0)
 		return (0);
 	if (check_argv_dup(argv) == 0)

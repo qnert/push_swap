@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:55:45 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 19:09:36 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/27 15:27:55 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	main(int argc, char **argv)
 	else
 		stack_a = stack_init(argc, argv);
 	stack_b = stack_create(argc);
+	if (stack_a == NULL)
+		return (stack_destroy(stack_a), stack_destroy(stack_b), 0);
 	check = stack_a->top - 1;
 	if (stack_a->top <= 3)
 		small_sort_three(stack_a);
