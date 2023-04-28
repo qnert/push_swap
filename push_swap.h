@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/28 10:45:27 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/28 11:39:05 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		check_dup(int argc, char **argv);
 int		check_input(int argc, char **argv);
 void	free_arr(char **arr);
 //stack argc = 2 funcs and check
-t_stack *stack_make(char **argv);
+t_stack	*stack_make(char **argv);
 int		check_argv_int(char **argv);
 int		check_argv_dup(char **argv);
 int		check_argv_type(char **argv);
