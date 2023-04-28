@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:11:59 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/27 15:40:05 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/28 10:46:11 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_stack	*stack_make(char **argv)
 	stack = stack_create(i);
 	while (i != 0)
 		push(stack, ft_atoi(input[--i]));
-	return (stack);
+	return (free_arr(input), stack);
 }
 
 int	check_argv_int(char **argv)
@@ -54,6 +54,7 @@ int	check_argv_int(char **argv)
 		}
 		i++;
 	}
+	free_arr(input);
 	return (1);
 }
 
@@ -76,6 +77,7 @@ int	check_argv_dup(char **argv)
 		}
 		i++;
 	}
+	free_arr(input);
 	return (1);
 }
 
@@ -94,6 +96,7 @@ int	check_argv_type(char **argv)
 			return (ft_printf("Error\n"), 0);
 		i++;
 	}
+	free_arr(input);
 	return (1);
 }
 

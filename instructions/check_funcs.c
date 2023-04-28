@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 18:27:34 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/28 10:45:06 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,17 @@ int	check_input(int argc, char **argv)
 	if (check_type(argc, argv) == 0)
 		return (0);
 	return (1);
+}
+
+void	free_arr(char **arr)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (arr[i] != NULL)
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
 }
