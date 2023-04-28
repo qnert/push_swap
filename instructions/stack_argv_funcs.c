@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:11:59 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/28 11:38:40 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/28 11:51:35 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	check_argv_type(char **argv)
 	{
 		if (ft_strlen(input[i]) > 11)
 			return (ft_printf("Error\n"), 0);
-		if (ft_atoi(input[i]) > 2147483647 || (ft_atoi(input[i]) < -2147483648))
+		if (ft_atoi_long(input[i]) > 2147483647 || (ft_atoi_long(input[i]) < -2147483648))
 			return (ft_printf("Error\n"), 0);
 		i++;
 	}

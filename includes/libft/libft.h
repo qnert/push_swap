@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:10:29 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/26 17:48:37 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/28 11:45:30 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-long	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 void	ft_bzero(void *dst, size_t n);
 void	*ft_calloc(size_t nitems, size_t size);
 int		ft_isalnum(int c);

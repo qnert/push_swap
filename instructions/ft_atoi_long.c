@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_long.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 16:50:23 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/28 11:45:16 by skunert          ###   ########.fr       */
+/*   Created: 2023/04/28 11:48:21 by skunert           #+#    #+#             */
+/*   Updated: 2023/04/28 11:54:19 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi_long(const char *str)
 {
 	int		i;
 	int		sign;
-	int		res;
+	long	res;
 
 	i = 0;
 	sign = 1;

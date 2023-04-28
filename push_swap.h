@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/28 11:39:05 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/28 11:53:04 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ typedef struct Stack
 	int	top;
 }	t_stack;
 
+//atoi_l
+long	ft_atoi_long(const char *str);
 //check input funcs
 int		check_int(int argc, char **argv);
 int		check_dup(int argc, char **argv);
