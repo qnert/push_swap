@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:05:37 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/28 11:53:04 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/28 12:01:29 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "./includes/includes.h"
 # include <stddef.h>
+# include <limits.h>
 
 //mystack struct
 typedef struct Stack
