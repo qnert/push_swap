@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 10:11:03 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/28 12:02:30 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/28 15:10:03 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int	check_dup(int argc, char **argv)
 		while (j < argc)
 		{
 			if (ft_strncmp(argv[i], argv[j], argc - 1) == 0)
+				return (ft_printf("Error\n"), 0);
+			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
 				return (ft_printf("Error\n"), 0);
 			j++;
 		}
