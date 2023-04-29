@@ -6,7 +6,7 @@
 /*   By: skunert <skunert@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:11:59 by skunert           #+#    #+#             */
-/*   Updated: 2023/04/28 15:12:51 by skunert          ###   ########.fr       */
+/*   Updated: 2023/04/29 13:51:31 by skunert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	check_argv_type(char **argv)
 	int		i;
 	char	**input;
 
-	i = 1;
+	i = 0;
 	input = ft_split(argv[1], ' ');
 	while (input[i] != NULL)
 	{
